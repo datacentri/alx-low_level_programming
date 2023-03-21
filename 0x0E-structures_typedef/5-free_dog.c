@@ -1,16 +1,21 @@
-#include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "dog.h"
 
 /**
- * free_dog -entry point
- * @d: entry structure with pointer
+ * free_dog - function with single argument
+ * @d: pointer type
+ *
+ * Description: frees dogs
+ * Return: na
  */
+
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d)
 	{
-		free(d->name);
 		free(d->owner);
+		free(d->name);
 		free(d);
 	}
 }

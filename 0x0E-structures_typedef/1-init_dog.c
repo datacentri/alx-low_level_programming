@@ -1,16 +1,17 @@
 #include "dog.h"
-#include <stdlib.h>
-
+#include <stdio.h>
 /**
- * init_dog - Entry point
- * @d: passing structure at the function
- * @name: store a strig for main
- * @age: store a number for main
- * @owner: store a strig for main
+ * init_dog - function with 4 arguments
+ * @d: structure pointer
+ * @name: pointer character
+ * @age: float type argument
+ * @owner: pointer type character
+ *
+ * Description: initialize a variable of type
+ * Return: na
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	/* Passing to stucture from main */
 	if (d != NULL)
 	{
 		d->name = name;
