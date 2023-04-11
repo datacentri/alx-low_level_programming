@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 	ssize_t dchars, ola;
-	char baus[1024];
+	char baus[2048];
 
 	if (argc != 3)
 	{
