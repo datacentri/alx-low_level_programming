@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * error_file - checks if files can be opened.
+ * error_file - to check if files can be opened.
  * @file_from: file_from.
  * @file_to: file_to.
- * @argv: arguments vector.
+ * @argv: arguments vector is defined.
  * Return: no return.
  */
 void error_file(int file_from, int file_to, char *argv[])
@@ -25,14 +25,14 @@ void error_file(int file_from, int file_to, char *argv[])
 /**
  * main - check the code for Holberton School students.
  * @argc: number of arguments.
- * @argv: arguments vector.
+ * @argv: arguments vector is defined.
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 	ssize_t dchars, ola;
-	char baus[1024];
+	char baus[2048];
 
 	if (argc != 3)
 	{
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file_from, file_to, argv);
 
-	dchars = 1024;
-	while (dchars == 1024)
+	dchars = 2048;
+	while (dchars == 2048)
 	{
-		dchars = read(file_from, baus, 1024);
+		dchars = read(file_from, baus, 2048);
 		if (dchars == -1)
 			error_file(-1, 0, argv);
 		ola = write(file_to, baus, dchars);
