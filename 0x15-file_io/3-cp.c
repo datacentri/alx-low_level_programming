@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 	ssize_t dchars, ola;
-	char baus[2048];
+	char baus[1024];
 
 	if (argc != 3)
 	{
@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0674);
 	error_file(file_from, file_to, argv);
 
-	dchars = 2048;
-	while (dchars == 2048)
+	dchars = 1024;
+	while (dchars == 1024)
 	{
 		dchars = read(file_from, baus, 2048);
 		if (dchars == -1)
