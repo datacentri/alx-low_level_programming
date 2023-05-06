@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * set_bit - sets the value of a bit to 1.
+ * clear_bit - sets the value of a bit to 0.
  * at a given index_dunni.
  * @n: pointer of an unsigned long int.
  * @index_dunni: index_dunni of the bit.
  *
  * Return: 1 if it worked, -1 if it didn't.
  */
-int set_bit(unsigned long int *x, unsigned int index_dunni)
+int clear_bit(unsigned long int *x, unsigned int index_dunni)
 {
 	unsigned int hh;
 
@@ -16,7 +16,9 @@ int set_bit(unsigned long int *x, unsigned int index_dunni)
 		return (-1);
 
 	hh = 1 << index_dunni;
-	*x = (*x | hh);
+
+	if (*x & hh)
+		*x ^= hh;
 
 	return (1);
 }
