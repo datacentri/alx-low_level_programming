@@ -3,20 +3,20 @@
 /**
  * dunni_flip_bits - returns the number of bits you would
  * need to flip to get from one number to another
- * @x: number one.
- * @h: number two.
+ * @c: number one.
+ * @p: number two.
  *
  * Return: number of bits.
  */
-unsigned int dunni_flip_bits(unsigned long int x, unsigned long int h)
+unsigned int dunni_flip_bits(unsigned long int c, unsigned long int p)
 {
-	unsigned int xbits;
+	unsigned int cbits;
 
-	for (xbits = 0; x || h; x >>= 1, h >>= 1)
+	for (cbits = 0; c || p; c >>= 1, p >>= 1)
 	{
-		if ((x & 1) != (h & 1))
-			xbits++;
+		if ((c & 1) != (p & 1))
+			cbits++;
 	}
 
-	return (xbits);
+	return (cbits);
 }
