@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * dunni_flip_bits - returns the number of bits you would
+ * flip_bits - returns the number of bits you would
  * need to flip to get from one number to another
- * @c: number one.
- * @p: number two.
+ * @n: number one.
+ * @m: number two.
  *
  * Return: number of bits.
  */
-unsigned int dunni_flip_bits(unsigned long int c, unsigned long int p)
+unsigned int dunni_flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int cbits;
+	unsigned int nbits;
 
-	for (cbits = 0; c || p; c >>= 1, p >>= 1)
+	for (nbits = 0; n || m; n >>= 1, m >>= 1)
 	{
-		if ((c & 1) != (p & 1))
-			cbits++;
+		if ((n & 1) != (m & 1))
+			nbits++;
 	}
 
-	return (cbits);
+	return (nbits);
 }
