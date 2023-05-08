@@ -7,7 +7,7 @@ int _putchar(char c);
 int get_bit(unsigned long int x, unsigned int index_dunni);
 int set_bit(unsigned long int *x, unsigned int index_dunni);
 int clear_bit(unsigned long int *x, unsigned int index_dunni);
-unsigned int dunni_flip_bits(unsigned long int x, unsigned long int h);
+unsigned int dunni_flip_bits(unsigned long int c, unsigned long int p);
 int dunni_get_endiannes_s(void);
 
 #endif
