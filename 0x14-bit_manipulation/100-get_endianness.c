@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * dunni_get_endiannes_s - checks the endianness
+ * get_endianness - checks the endianness
  *
  * Return: 0 if big endian, 1 if little endian
  */
-int dunni_get_endiannes_s(void)
+int get_endianness(void)
 {
 	unsigned int x;
-	char *d;
+	char *c;
 
 	x = 1;
-	d = (char *) &x;
+	c = (char *) &x;
 
-	return ((int)*d);
+	return ((int)*c);
 }
